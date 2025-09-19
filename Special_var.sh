@@ -17,3 +17,16 @@ occupation=$4
 
 echo "My Details
 Name: $1 ,Age= $2, Village= $3, Occupation= $4 "
+
+#Result
+############ $ sh Special_var.sh ram 10 hyd baby #############
+# All variables passed to the script: ram 10 hyd baby
+# All variables passed to the script: ram 10 hyd baby
+# Script name: Special_var.sh
+# Current directory: /c/aaa/Devsecops/Handson/Scripting/repos/shell-practice
+# Who is running this:
+# Home directory of user: /c/Users/25010149
+# PID of this script: 905
+# PID of the last command in background is: 906
+# My Details
+# Name: ram ,Age= 10, Village= hyd, Occupation= baby
