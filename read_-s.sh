@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #read (get input from user)
-# '-s' with hide the user's input. usecase <password input>
+# '-s' which hide the user's input. usecase <password input>
 
 echo "Please enter your password"
 read -s password # password need to enter by user
