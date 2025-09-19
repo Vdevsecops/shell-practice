@@ -9,9 +9,11 @@ echo "Home directory of user: $HOME"
 echo "PID of this script: $$"
 sleep 50 &
 echo "PID of the last command in background is: $!"
+#arguments
+name=$1
+age=$2
+village=$3
+occupation=$4
 
-#variables
-name="venkat"
-age="30"
-village="hyd"
-occupation="IT Professional"
+echo "My Details
+Name: $1 ,Age= $2, Village= $3, Occupation= $4 "
