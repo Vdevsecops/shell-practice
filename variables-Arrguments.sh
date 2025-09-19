@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#arguments
 name=$1
 age=$2
 village=$3

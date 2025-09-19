@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#variables
 name="venkat"
 age="30"
 village="hyd"
