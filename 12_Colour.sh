@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo -e "\e[31m Colour"
+for code in {31..36};do
+    echo -e "\e[${code}m Colour Code \e[${code}m"
+done    
