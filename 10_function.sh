@@ -20,8 +20,8 @@ VALIDATE(){ # function receives the inputs from args like shell script args
 dnf remove mysql -y
 VALIDATE $? "MySQL"
 
-dnf remove python3 -y
-VALIDATE $? "python3"
+dnf remove python -y
+VALIDATE $? "python"
 
 dnf remove nginx -y
 VALIDATE $? "Nginx"
