@@ -21,5 +21,6 @@ dnf install mysql -y
 VALIDATE $? "MySQL"
 
 dnf install pythone -y
+VALIDATE $? "python"
 
 
