@@ -1,5 +1,10 @@
 #!/bin/bash
 
+R=\e[31m
+G=\e[32m
+Y=\e[33m
+N=\e[0m
+
 userid=$(id -u)
 
 if [ $userid -ne 0 ]; then
@@ -9,9 +14,9 @@ fi
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-        echo "Installation of $2 is Failure"
+        echo -e "Installation of $2 is $R Failure $N"
     else
-        echo "Installation of $2 is Success"
+        echo "Installation of $2 is $G Success $N"
     fi
 }
 
@@ -20,7 +25,7 @@ if [ $? -ne 0 ];then
     dnf install mysql -y
     VALIDATE $? "MySQL"
 else
-    echo "MySQL Package Is Already Installed"
+    echo -e "MySQL Package Is Already Installed --- $Y Step is Skipping $N"
 fi
 
 dnf list installed nginx
@@ -28,7 +33,7 @@ dnf list installed nginx
         dnf install nginx -y
         VALIDATE $? "nginx"
     else
-        echo "Nginx Package is Already Installed"
+        echo "Nginx Package is Already Installed --- $Y Step is Skipping $N"
     fi
 
 dnf list installed python3
@@ -36,5 +41,5 @@ dnf list installed python3
         dnf install python3 -y
         VALIDATE $? "Python3"
     else 
-        echo "Python3 Package Is Already Installed"
+        echo "Python3 Package Is Already Installed --- $Y Step is Skipping $N"
     fi
