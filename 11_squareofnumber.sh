@@ -1,7 +1,7 @@
 #!/bin/bash
 
 square(){
-    sqr=$(($Number**2))
+    sqr=$(($Number*$Number))
 }
 
 Number=$(read -p "Please enter the number: ")
