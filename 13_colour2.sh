@@ -25,7 +25,7 @@ if [ $? -ne 0 ];then
     dnf install mysql -y
     VALIDATE $? "MySQL"
 else
-    echo -e "MySQL Package Is Already Installed --- $Y Step is Skipping $N"
+    echo -e "MySQL Package Is Already Installed --- $Y Skipping the Step $N"
 fi
 
 dnf list installed nginx
@@ -33,7 +33,7 @@ dnf list installed nginx
         dnf install nginx -y
         VALIDATE $? "nginx"
     else
-        echo "Nginx Package is Already Installed --- $Y Step is Skipping $N"
+        echo -e "Nginx Package is Already Installed --- $Y Skipping the Step $N"
     fi
 
 dnf list installed python3
@@ -41,5 +41,5 @@ dnf list installed python3
         dnf install python3 -y
         VALIDATE $? "Python3"
     else 
-        echo "Python3 Package Is Already Installed --- $Y Step is Skipping $N"
+        echo -e "Python3 Package Is Already Installed --- $Y Skipping the Step $N"
     fi
