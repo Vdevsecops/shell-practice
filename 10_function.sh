@@ -17,12 +17,12 @@ VALIDATE(){ # function receives the inputs from args like shell script args
     fi
 }
 
-dnf install mysql -y
+dnf remove mysql -y
 VALIDATE $? "MySQL"
 
-dnf install python3 -y
+dnf remove python3 -y
 VALIDATE $? "python3"
 
-dnf install nginx -y
+dnf remove nginx -y
 VALIDATE $? "Nginx"
 
