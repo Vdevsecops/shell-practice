@@ -15,5 +15,11 @@ VALIDATE(){
     fi
 }
 
-dnf install mysql -y
-VALIDATE $? "MySQL"
+dnf list installed mysql
+if [ $? -ne 0];then
+    dnf install mysql -y
+    VALIDATE $? "MySQL"
+else
+    echo "$2 Package already Installed"
+fi
+    
