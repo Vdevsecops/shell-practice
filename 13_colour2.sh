@@ -24,12 +24,12 @@ else
 fi
 
 dnf list installed nginx
-if [ $? -ne 0]; then
-    dnf install nginx -y
-    VALIDATE $? "nginx"
-else
-    echo "Nginx Package is Already Installed"
-
+    if [ $? -ne 0]; then
+        dnf install nginx -y
+        VALIDATE $? "nginx"
+    else
+        echo "Nginx Package is Already Installed"
+    fi
 
 dnf list installed python3
     if [ $? -ne 0];then
@@ -37,3 +37,4 @@ dnf list installed python3
         VALIDATE $? "Python3"
     else 
         echo "Python3 Package Is Already Installed"
+    fi
