@@ -17,7 +17,7 @@ VALIDATE(){
 
 dnf list installed mysql
 if [ $? -ne 0 ];then
-    dnf remove mysql -y
+    dnf install mysql -y
     VALIDATE $? "MySQL"
 else
     echo "MySQL Package Is Already Installed"
@@ -25,7 +25,7 @@ fi
 
 dnf list installed nginx
     if [ $? -ne 0 ]; then
-        dnf remove nginx -y
+        dnf install nginx -y
         VALIDATE $? "nginx"
     else
         echo "Nginx Package is Already Installed"
@@ -33,7 +33,7 @@ dnf list installed nginx
 
 dnf list installed python3
     if [ $? -ne 0 ];then
-        dnf remove python3 -y
+        dnf install python3 -y
         VALIDATE $? "Python3"
     else 
         echo "Python3 Package Is Already Installed"
