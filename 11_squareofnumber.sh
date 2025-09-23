@@ -6,7 +6,6 @@ square(){
 
 Number=$(read -p "Please enter the number: ")
 
-sqare $Number
 echo "square of your number is $sqr"
 # Function to calculate square
 # square() {
