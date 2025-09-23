@@ -5,4 +5,4 @@ square(){
     echo "square of your number is $sqr"
 }
 
-Number= read -p "Please enter the number: "
+Number=$(read -p "Please enter the number: ")
