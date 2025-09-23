@@ -20,5 +20,5 @@ if [ $? -ne 0 ];then
     dnf install mysql -y
     VALIDATE $? "MySQL"
 else
-    echo "$2 Package already Installed"
+    echo "MySQL Package already Installed"
 fi
