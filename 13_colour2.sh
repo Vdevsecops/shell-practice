@@ -24,7 +24,7 @@ else
 fi
 
 dnf list installed nginx
-    if [ $? -ne 0]; then
+    if [ $? -ne 0 ]; then
         dnf install nginx -y
         VALIDATE $? "nginx"
     else
@@ -32,7 +32,7 @@ dnf list installed nginx
     fi
 
 dnf list installed python3
-    if [ $? -ne 0];then
+    if [ $? -ne 0 ];then
         dnf install python3 -y
         VALIDATE $? "Python3"
     else 
