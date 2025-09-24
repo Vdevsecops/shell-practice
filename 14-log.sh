@@ -8,7 +8,7 @@ Y="\e[33m"
 N="\e[0m"
 
 LOG_FOLDER="/var/log/shell_log"
-LOG_NAME=(echo $0 | cut -d "." f1)
+LOG_NAME=$(echo $0 | cut -d "." f1)
 LOG_FILE="$LOG_FOLDER/$LOG_FILE.log"
 mkdir -p $LOG_FOLDER
 
