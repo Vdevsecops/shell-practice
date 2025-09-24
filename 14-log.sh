@@ -7,6 +7,12 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+LOG_FOLDER="/var/log/shell_log"
+LOG_NAME=(echo $0 | cut -d "." f1)
+LOG_FILE="$LOG_FOLDER/$LOG_FILE.log"
+mkdir -p $LOG_FOLDER
+
+echo"Script Started Executed on $(date)"
 if [ $USERID -ne 0 ]; then
     echo "Please run Script With Root Privelage"
     exit 1
@@ -23,7 +29,7 @@ VALIDATE(){
 
 dnf list installed mysql
 if [ $? -ne 0 ];then
-    dnf install mysql -y
+    dnf install mysql -y &>>$LOG_FILE
     VALIDATE $? "MySQL"
 else 
     echo -e "MySQl Package is already Installed $Y Skipping $N"    
