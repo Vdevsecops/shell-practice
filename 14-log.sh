@@ -13,7 +13,7 @@ if [ $USERID -ne 0 ]; then
 fi
 
 VALIDATE(){
-    if [$1 -ne 0];then
+    if [ $1 -ne 0 ];then
         echo -e "installation of $2 is $R Failure $N"
         exit 1
     else
