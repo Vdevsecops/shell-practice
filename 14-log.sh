@@ -9,10 +9,6 @@ N="\e[0m"
 Log_Folder="/var/log/Shell-Scripting"
 Script_name=$(echo $0 | cut -d "." -f1)
 Log_File="$Log_Folder/$Script_name.log"
-LOGS_FOLDER="/var/log/shell-script"
-SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
-LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
-
 mkdir -p $LOGS_FOLDER
 echo "Script Started exicuting on $(date)"
 
@@ -31,25 +27,25 @@ VALIDATE(){
     fi
 }
 
-dnf list installed mysql &>>$LOG_FILE
+dnf list installed mysql &>>$Log_File
     if [ $? -ne 0 ];then
-        dnf install mysql -y &>>$LOG_FILE
+        dnf install mysql -y &>>$Log_File
         VALIDATE $? "MySQL"
     else
         echo -e "MySQL Package Is Already Installed $Y Skipping the Step $N"
     fi
 
-dnf list installed nginx &>>$LOG_FILE
+dnf list installed nginx &>>$Log_File
     if [ $? -ne 0 ]; then
-        dnf install nginx -y &>>$LOG_FILE
+        dnf install nginx -y &>>$Log_File
         VALIDATE $? "nginx"
     else
         echo -e "Nginx Package is Already Installed $Y Skipping the Step $N"
     fi
 
-dnf list installed python3 &>>$LOG_FILE
+dnf list installed python3 &>>$Log_File
     if [ $? -ne 0 ];then
-        dnf install python3 -y &>>$LOG_FILE
+        dnf install python3 -y &>>$Log_File
         VALIDATE $? "Python3"
     else 
         echo -e "Python3 Package Is Already Installed $Y Skipping the Step $N"
