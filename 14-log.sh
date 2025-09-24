@@ -9,7 +9,7 @@ N="\e[0m"
 Log_Folder="/var/log/Shell-Scripting"
 Script_name=$(echo $0 | cut -d "." -f1)
 Log_File="$Log_Folder/$Script_name.log"
-mkdir -p $LOGS_FOLDER
+mkdir -p $Log_Folder
 echo "Script Started exicuting on $(date)"
 
 
