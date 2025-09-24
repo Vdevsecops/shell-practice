@@ -5,11 +5,14 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-Log_Folder="/var/log/Shell-Scripting"
-Script_name=$(echo $0 | cut -d "." -f1)
-Log_File="$Log_Folder/$Script_name.log"
+# Log_Folder="/var/log/Shell-Scripting"
+# Script_name=$(echo $0 | cut -d "." -f1)
+# Log_File="$Log_Folder/$Script_name.log"
+LOGS_FOLDER="/var/log/shell-script"
+SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
-mkdir -p $Log_Folder
+mkdir -p $LOGS_FOLDER
 echo "Script Started exicuting on $(date)"
 userid=$(id -u)
 
