@@ -49,3 +49,4 @@ if [ $? -ne 0 ]; then
     VALIDATE $? "python3"
 else
     echo "python3 Package is already installed $Y Skipping $N" &>>$LOG_FILE
+fi
