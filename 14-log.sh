@@ -12,7 +12,7 @@ LOG_NAME=$( echo $0 | cut -d "." -f1 )
 LOG_FILE="$LOG_FOLDER/$LOG_FILE.log"
 mkdir -p $LOG_FOLDER
 
-echo"Script Started Executed on $(date)"
+echo "Script Started Executed on $(date)"
 if [ $USERID -ne 0 ]; then
     echo "Please run Script With Root Privelage"
     exit 1
