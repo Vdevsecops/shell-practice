@@ -23,3 +23,7 @@ echo "Eleventh argument: $11"
 echo "All arguments as one string: $*"
 
 # $@ – All arguments as separate strings
+echo "All arguments individually:"
+for arg in "$@"; do
+    echo "$arg"
+done
