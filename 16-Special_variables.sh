@@ -21,3 +21,5 @@ echo "Eleventh argument: $11"
 
 # $* – All arguments as a single string
 echo "All arguments as one string: $*"
+
+# $@ – All arguments as separate strings
