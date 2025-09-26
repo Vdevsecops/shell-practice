@@ -14,3 +14,6 @@ echo "Third argument: $3"
 # ${10}, ${11}, ... – Positional parameters beyond 9
 echo "Tenth argument: ${10}"
 echo "Eleventh argument: ${11}"
+
+# if we give tenth arg as without {}
+echo "Tenth argument: $10"
