@@ -34,3 +34,7 @@ echo "Exit status of previous command: $?"
 
 # $$ – PID of current script
 echo "Current script PID: $$"
+
+# $! – PID of last background process
+sleep 5 &
+echo "PID of last background process: $!"
