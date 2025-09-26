@@ -31,3 +31,6 @@ done
 # $? – Exit status of last command
 ls /nonexistent_dir
 echo "Exit status of previous command: $?"
+
+# $$ – PID of current script
+echo "Current script PID: $$"
