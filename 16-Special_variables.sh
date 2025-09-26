@@ -10,3 +10,7 @@ echo "This script's name is: $0"
 echo "First argument: $1"
 echo "Second argument: $2"
 echo "Third argument: $3"
+
+# ${10}, ${11}, ... – Positional parameters beyond 9
+echo "Tenth argument: ${10}"
+echo "Eleventh argument: ${11}"
