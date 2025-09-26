@@ -38,3 +38,9 @@ echo "Current script PID: $$"
 # $! – PID of last background process
 sleep 5 &
 echo "PID of last background process: $!"
+
+# $_ – Last argument of previous command
+echo "Last argument of previous command: $_"
+# For better effect, try running:
+ls /etc
+./$0.sh
