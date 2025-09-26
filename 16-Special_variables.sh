@@ -27,3 +27,7 @@ echo "All arguments individually:"
 for arg in "$@"; do
     echo "$arg"
 done
+
+# $? – Exit status of last command
+ls /nonexistent_dir
+echo "Exit status of previous command: $?"
