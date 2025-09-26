@@ -43,7 +43,7 @@ echo "PID of last background process: $!"
 echo "Last argument of previous command: $_"
 # For better effect, try running:
 ls /etc
-echo "$0"
+./"$0"
 echo "$(pwd)"
 echo "$(pwd)"
 echo "$(pwd)"
