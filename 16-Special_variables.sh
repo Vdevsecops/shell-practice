@@ -43,4 +43,4 @@ echo "PID of last background process: $!"
 echo "Last argument of previous command: $_"
 # For better effect, try running:
 ls /etc
-./$( $0 | cut -d ". " -f1 ).sh
+./( $0 | cut -d ". " -f1 ).sh
